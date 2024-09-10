@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>taks to do</title>
-    <link rel="icon" href="icon/note.png" type="image" />
+    <title>Tasks to do</title>
+    <link rel="icon" href="icon/note.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="todo-app">
-        <h2>task to do WEB<img src="icon/note.png" alt="gambar note" /></h2>
+        <h2>Task to do WEB<img src="icon/note.png" alt="gambar note" /></h2>
         <div class="row">
-          <input type="text" id="inpu-box" placeholder="tambahkan tugas" required />
-          <button onclick="addtask()">tambahkan</button>
+          <input type="text" id="input-box" placeholder="tambahkan tugas" required />
+          <button id="add-btn" onclick="addTask()">Tambahkan</button>
+          <button id="cancel-btn" onclick="cancelEdit()" style="display: none">Batal</button>
         </div>
         <ul id="list-container"></ul>
       </div>

@@ -1,15 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(135deg, #0a5bff, #00ff00);
   padding: 10px;
 }
+
 .todo-app {
   width: 100%;
   max-width: 600px;
@@ -18,16 +20,19 @@
   padding: 40px 30px 70px;
   border-radius: 10px;
 }
+
 .todo-app h2 {
   color: #333;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .todo-app h2 img {
   width: 30px;
   margin-left: 10px;
 }
+
 .row {
   display: flex;
   align-items: center;
@@ -37,6 +42,7 @@
   padding-left: 20px;
   margin-bottom: 25px;
 }
+
 input {
   flex: 1;
   border: none;
@@ -44,6 +50,7 @@ input {
   background: transparent;
   padding: 10px;
 }
+
 button {
   border: none;
   outline: none;
@@ -54,12 +61,15 @@ button {
   cursor: pointer;
   border-radius: 40px;
 }
+
 button:hover {
   background-color: #00b800;
 }
+
 button:active {
   background-color: #00ff00;
 }
+
 ul li {
   list-style: none;
   font-size: 17px;
@@ -69,10 +79,12 @@ ul li {
   position: relative;
   margin: 10px;
 }
-li:hover {
-  background-color: rgb(238, 238, 238);
+
+ul li:hover {
+  background-color: #eee;
   border-radius: 50px;
 }
+
 ul li::before {
   content: "";
   position: absolute;
@@ -85,13 +97,16 @@ ul li::before {
   top: 8px;
   left: 8px;
 }
-ul li.check {
+
+ul li.checked {
   color: #85858583;
   text-decoration: line-through;
 }
-ul li.check::before {
+
+ul li.checked::before {
   background-image: url(icon/check-removebg-preview.png);
 }
+
 ul li span {
   position: absolute;
   right: 0;
@@ -104,14 +119,24 @@ ul li span {
   text-align: center;
   border-radius: 50%;
 }
+
+.edit-btn {
+  right: 40px;
+}
+
+.delete-btn {
+  right: 0;
+}
+
 ul li span:hover {
-  background: #cccccc;
+  background: #ccc;
 }
 
 @media screen and (max-width: 450px) {
   .container {
-    max-height: 110vh;
+    min-height: 110vh;
   }
+
   button {
     padding: 16px 30px;
   }
@@ -119,12 +144,14 @@ ul li span:hover {
 
 @media screen and (max-width: 400px) {
   .container {
-    max-height: 115vh;
+    min-height: 115vh;
   }
+
   input {
     padding: 5px;
     font-size: 12px;
   }
+
   button {
     padding: 10px;
     font-size: 14px;
